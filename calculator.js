@@ -93,4 +93,3 @@ function calculate() {
         Land Saved: ${(premiumSteers * landPerSteer - fullSetSteers * landPerSteer).toFixed(2)} sq meters
     `;
 }
-
