@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Set vs Premium Beef Comparison</title>
+    <title>Full Set vs Premium Beef Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Full Set vs Premium Beef Calculator</h1>
+    <h1>Full Set vs Premium Beef Model Comparison</h1>
 
-    <!-- Singular Input Section -->
+    <!-- Input Section -->
     <div class="input-section">
-        <h2>Enter Monthly Beef Consumption</h2>
+        <h2>Enter Beef Consumption</h2>
         <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
         <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
         <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
         <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
-        <button onclick="calculateComparison()">Calculate</button>
+        <button onclick="calculate()">Calculate</button>
     </div>
 
-    <!-- Singular Output Comparison -->
-    <div class="comparison-section">
+    <!-- Results Table (Side by Side) -->
+    <div class="results-section">
         <h2>Results Comparison</h2>
         <div class="comparison-table">
             <div class="model">
@@ -34,9 +34,9 @@
         </div>
     </div>
 
-    <!-- Summary of Environmental Impact -->
-    <div class="summary-section">
-        <h2>Positive Environmental Impact of Full Set</h2>
+    <!-- Environmental Impact Section -->
+    <div class="environmental-impact">
+        <h2>Environmental Impact Comparison</h2>
         <div id="environmentImpact"></div>
     </div>
 
