@@ -10,22 +10,18 @@ const landPerSteer = 2000; // square meters per steer
 const carbonOffsetPerSteer = 5000; // kg CO₂ offset per steer
 const steerCanteenBeef = 10; // 10 kg for 1 steer equivalent in low-quality beef (staff canteen)
 
-// Percentages for guest and staff use
-const guestUse = {
-    premiumCuts: 1.0, // 100% for guests
-    thinSteaks: 0.2,  // 20% for guests
-    boneInRoasts: 0.3,  // 30% for guests
-    cubeMeat: 0.15, // 15% for guests
-    groundMeat: 0.2  // 20% for guests
-};
-
-const staffUse = {
-    premiumCuts: 0.0,  // 0% for staff
-    thinSteaks: 0.8,  // 80% for staff
-    boneInRoasts: 0.7,  // 70% for staff
-    cubeMeat: 0.85, // 85% for staff
-    groundMeat: 0.8  // 80% for staff
-};
+// Helper function to format large numbers with commas and units
+function formatNumber(value, unit) {
+    if (unit === "metric tons") {
+        return (value / 1000).toFixed(2) + " " + unit;
+    } else if (unit === "m³") {
+        return (value / 1000).toFixed(2) + " " + unit;
+    } else if (unit === "hectares") {
+        return (value / 10000).toFixed(2) + " " + unit;
+    } else {
+        return value.toLocaleString() + " " + unit;
+    }
+}
 
 // Main Calculation Function
 function calculate() {
@@ -103,10 +99,10 @@ function calculate() {
     document.getElementById("environmentImpact").innerHTML = `
         <div style="text-align:center;">
             <h4>Environmental Impact Comparison</h4>
-            CO₂ Saved: ${co2Difference.toFixed(2)} kg<br>
-            Water Saved: ${((premiumGuestSteers + premiumStaffSteers) * waterPerSteer - fullSetSteers * waterPerSteer).toFixed(2)} liters<br>
-            Land Saved: ${((premiumGuestSteers + premiumStaffSteers) * landPerSteer - fullSetSteers * landPerSteer).toFixed(2)} sq meters<br>
-            Carbon Footprint Offset: ${carbonFootprintOffset.toFixed(2)} kg of CO₂<br>
+            CO₂ Saved: ${formatNumber(co2Difference, "metric tons")}<br>
+            Water Saved: ${formatNumber(((premiumGuestSteers + premiumStaffSteers) * waterPerSteer - fullSetSteers * waterPerSteer), "m³")}<br>
+            Land Saved: ${formatNumber(((premiumGuestSteers + premiumStaffSteers) * landPerSteer - fullSetSteers * landPerSteer), "hectares")}<br>
+            Carbon Footprint Offset: ${formatNumber(carbonFootprintOffset, "metric tons")}<br>
             <br>
             <h4>Cows Saved: ${cowsSaved.toFixed(2)}</h4>
         </div>
