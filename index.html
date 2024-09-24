@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Set vs Premium Beef Calculator</title>
+    <title>BEEF PURCHASING MODEL</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Full Set vs Premium Beef Model Comparison</h1>
+    <header>
+        <h1>BEEF PURCHASING MODEL</h1>
+        <h2>Full Set Model Simulation</h2>
+    </header>
 
-    <!-- Input Section -->
-    <div class="input-section">
-        <h2>Enter Beef Consumption</h2>
-        <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
-        <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
-        <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
-        <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
+    <section id="inputSection">
+        <h3>Enter Your Average Monthly Beef Consumption</h3>
+        <label for="guestConsumption">Guest Beef Consumption (kg):</label>
+        <input type="number" id="guestConsumption" name="guestConsumption">
+        <label for="staffConsumption">Staff Beef Consumption (kg):</label>
+        <input type="number" id="staffConsumption" name="staffConsumption">
         <button onclick="calculate()">Calculate</button>
-    </div>
+    </section>
 
-    <!-- Results Table (Side by Side) -->
-    <div class="results-section">
-        <h2>Results Comparison</h2>
-        <div class="comparison-table">
-            <div class="model">
-                <h3>Premium Only Model</h3>
-                <div id="premiumResult"></div>
-            </div>
-            <div class="model">
-                <h3>Full Set Model</h3>
-                <div id="fullsetResult"></div>
-            </div>
+    <section id="resultComparison">
+        <h3>Purchasing Model Comparison</h3>
+
+        <div id="premiumResult">
+            <!-- Premium Only results will appear here -->
         </div>
-    </div>
 
-    <!-- Environmental Impact Section -->
-    <div class="environmental-impact">
-        <h2>Environmental Impact Comparison</h2>
-        <div id="environmentImpact"></div>
-    </div>
+        <div id="fullsetResult">
+            <!-- Full Set results will appear here -->
+        </div>
+    </section>
+
+    <section id="environmentImpact">
+        <!-- Environmental impact will appear here -->
+    </section>
 
     <script src="calculator.js"></script>
 </body>
