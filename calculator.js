@@ -83,7 +83,9 @@ function calculate() {
         Thin Steaks: ${staffThinSteaks.toFixed(2)} kg<br>
         Bone-In Roasts: ${staffBoneInRoasts.toFixed(2)} kg<br>
         Cube Meat: ${staffCubeMeat.toFixed(2)} kg<br>
-        Ground Meat: ${staffGroundMeat.toFixed(2)} kg
+        Ground Meat: ${staffGroundMeat.toFixed(2)} kg<br>
+
+        <br><strong>Total Steers Slaughtered (Full Set Model): ${fullSetSteers.toFixed(2)}</strong><br>
     `;
 
     // Environmental Impact Calculation
