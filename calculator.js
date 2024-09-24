@@ -144,3 +144,14 @@ function calculate() {
         </div>
     `;
 }
+// Calculate total for guest and staff consumption
+const premiumTotal = guestConsumption + staffConsumption;
+const fullSetTotal = guestConsumption + staffConsumption;
+
+// Update HTML for Premium Only Total
+document.getElementById("premiumTotal").innerHTML = `
+    <h4>Total Beef for Premium Model: ${premiumTotal.toFixed(2)} kg</h4>`;
+
+// Update HTML for Full Set Total
+document.getElementById("fullSetTotal").innerHTML = `
+    <h4>Total Beef for Full Set Model: ${fullSetTotal.toFixed(2)} kg</h4>`;
