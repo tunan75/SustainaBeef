@@ -11,6 +11,23 @@ const landPerSteer = 2000; // square meters per steer
 const carbonOffsetPerSteer = 5000; // kg CO₂ offset per steer
 const steerCanteenBeef = 10; // 10 kg for 1 steer equivalent in low-quality beef (staff canteen)
 
+// Percentages for guest and staff use
+const guestUse = {
+    premiumCuts: 1.0, // 100% for guests
+    thinSteaks: 0.2,  // 20% for guests
+    boneInRoasts: 0.3,  // 30% for guests
+    cubeMeat: 0.15, // 15% for guests
+    groundMeat: 0.2  // 20% for guests
+};
+
+const staffUse = {
+    premiumCuts: 0.0,  // 0% for staff
+    thinSteaks: 0.8,  // 80% for staff
+    boneInRoasts: 0.7,  // 70% for staff
+    cubeMeat: 0.85, // 85% for staff
+    groundMeat: 0.8  // 80% for staff
+};
+
 // Helper function to format large numbers with commas and units
 function formatNumber(value, unit) {
     if (unit === "metric tons") {
@@ -89,4 +106,3 @@ function calculate() {
     document.getElementById("carbonFootprintOffset").textContent = formatNumber(carbonFootprintOffset, "metric tons");
     document.getElementById("cowsSaved").textContent = cowsSaved.toFixed(2);
 }
-
