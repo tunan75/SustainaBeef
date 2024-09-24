@@ -144,3 +144,18 @@ function calculate() {
     `;
 }
 
+// Update HTML for Premium Model
+document.getElementById("premiumCows").textContent = (premiumGuestSteers + premiumStaffSteers).toFixed(2);
+document.getElementById("premiumCuts").textContent = guestConsumption.toFixed(2); // Premium cuts for guests
+document.getElementById("premiumThinSteaks").textContent = (guestConsumption * guestUse.thinSteaks).toFixed(2);
+document.getElementById("premiumRoasts").textContent = (guestConsumption * guestUse.boneInRoasts).toFixed(2);
+document.getElementById("premiumStewMeat").textContent = (guestConsumption * guestUse.cubeMeat).toFixed(2);
+document.getElementById("premiumGroundMeat").textContent = (guestConsumption * guestUse.groundMeat).toFixed(2);
+
+// Update HTML for Full Set Model
+document.getElementById("fullSetCows").textContent = fullSetSteers.toFixed(2);
+document.getElementById("fullSetCuts").textContent = guestPremiumCuts.toFixed(2); // Full Set cuts for guests
+document.getElementById("fullSetThinSteaks").textContent = guestThinSteaks.toFixed(2);
+document.getElementById("fullSetRoasts").textContent = guestBoneInRoasts.toFixed(2);
+document.getElementById("fullSetStewMeat").textContent = guestCubeMeat.toFixed(2);
+document.getElementById("fullSetGroundMeat").textContent = guestGroundMeat.toFixed(2);
