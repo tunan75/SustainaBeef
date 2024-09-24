@@ -79,49 +79,41 @@ function calculate() {
     // Update HTML with Results for Premium Only
     document.getElementById("premiumResult").innerHTML = `
         <h4>Total Cows Slaughtered: ${(premiumGuestSteers + premiumStaffSteers).toFixed(2)}</h4>
-        <table>
-            <tr><td>Premium Cuts for Guests (High Quality):</td><td>${guestConsumption} kg</td></tr>
-            <tr><td>Premium Cuts for Staff (Low Quality):</td><td>${staffConsumption} kg</td></tr>
-        </table>
-        <br>
-        For Guests, beef is used in various forms:
+        Premium Cuts for Guests (High Quality): ${guestConsumption} kg<br>
+        Premium Cuts for Staff (Low Quality): ${staffConsumption} kg
+        <br><br>
+        For Guests, beef is used as thick steaks in A la Carte Restaurants (premium Cuts), thin steaks in sandwiches and buffets, roasts (bone-in steaks and roasts), and stew meat and ground meat for other side dishes. Based on menu stats, the Guest Beef consumption should be divided into the below section:
         <ul>
-           const guestThickSteaks = guestConsumption * guestUse.premiumCuts; // 100% of guest consumption for Thick Steaks
-           const guestThinSteaks = guestConsumption * guestUse.thinSteaks;  // 20% for Thin Steaks
-           const guestBoneInRoasts = guestConsumption * guestUse.boneInRoasts;  // 30% for Roasts
-           const guestCubeMeat = guestConsumption * guestUse.cubeMeat; // 15% for Cube Meat
-           const guestGroundMeat = guestConsumption * guestUse.groundMeat; // 20% for Ground Meat
+            <li>Premium Cuts: ${(guestConsumption * guestUse.premiumCuts).toFixed(2)} kg</li>
+            <li>Thin Steaks: ${(guestConsumption * guestUse.thinSteaks).toFixed(2)} kg</li>
+            <li>Bone-In Roasts: ${(guestConsumption * guestUse.boneInRoasts).toFixed(2)} kg</li>
+            <li>Cube Meat: ${(guestConsumption * guestUse.cubeMeat).toFixed(2)} kg</li>
+            <li>Ground Meat: ${(guestConsumption * guestUse.groundMeat).toFixed(2)} kg</li>
         </ul>
         <br>
-        Staff canteen operations mostly use thin steaks and cube meat:
+        Staff canteen operations mostly use thin steaks and curry-type cube meat:
         <ul>
-            const staffThickSteaks = staffConsumption * staffUse.premiumCuts;  // 0% for Thick Steaks
-            const staffThinSteaks = staffConsumption * staffUse.thinSteaks;  // 80% for Thin Steaks
-            const staffBoneInRoasts = staffConsumption * staffUse.boneInRoasts;  // 70% for Roasts
-            const staffCubeMeat = staffConsumption * staffUse.cubeMeat; // 85% for Cube Meat
-            const staffGroundMeat = staffConsumption * staffUse.groundMeat;  // 80% for Ground Meat
+            <li>Thin Steaks: ${(staffConsumption * staffUse.thinSteaks).toFixed(2)} kg</li>
+            <li>Cube Meat: ${(staffConsumption * staffUse.cubeMeat).toFixed(2)} kg</li>
         </ul>
     `;
 
     // Update HTML with Results for Full Set
     document.getElementById("fullsetResult").innerHTML = `
         <h4>Total Cows Slaughtered: ${fullSetSteers.toFixed(2)}</h4>
-        <table>
-        document.getElementById("fullsetResult").innerHTML = `
-    <h4>Total Cows Slaughtered: ${fullSetSteers.toFixed(2)}</h4>
-    <h4>Full Set Model (For Guests):</h4>
-    Thick Steaks: ${guestThickSteaks.toFixed(2)} kg<br>
-    Thin Steaks: ${guestThinSteaks.toFixed(2)} kg<br>
-    Bone-In Roasts: ${guestBoneInRoasts.toFixed(2)} kg<br>
-    Cube Meat: ${guestCubeMeat.toFixed(2)} kg<br>
-    Ground Meat: ${guestGroundMeat.toFixed(2)} kg<br>
+        <h4>Full Set Model (For Guests):</h4>
+        Premium Cuts: ${guestPremiumCuts.toFixed(2)} kg<br>
+        Thin Steaks: ${guestThinSteaks.toFixed(2)} kg<br>
+        Bone-In Roasts: ${guestBoneInRoasts.toFixed(2)} kg<br>
+        Cube Meat: ${guestCubeMeat.toFixed(2)} kg<br>
+        Ground Meat: ${guestGroundMeat.toFixed(2)} kg<br>
 
-    <h4>Full Set Model (For Staff):</h4>
-    Thin Steaks: ${staffThinSteaks.toFixed(2)} kg<br>
-    Bone-In Roasts: ${staffBoneInRoasts.toFixed(2)} kg<br>
-    Cube Meat: ${staffCubeMeat.toFixed(2)} kg<br>
-    Ground Meat: ${staffGroundMeat.toFixed(2)} kg
-        </table>
+        <h4>Full Set Model (For Staff):</h4>
+        Premium Cuts: ${staffPremiumCuts.toFixed(2)} kg<br>
+        Thin Steaks: ${staffThinSteaks.toFixed(2)} kg<br>
+        Bone-In Roasts: ${staffBoneInRoasts.toFixed(2)} kg<br>
+        Cube Meat: ${staffCubeMeat.toFixed(2)} kg<br>
+        Ground Meat: ${staffGroundMeat.toFixed(2)} kg
     `;
 
     // Environmental Impact Calculation
