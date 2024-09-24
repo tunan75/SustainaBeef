@@ -3,73 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEEF PURCHASING MODEL</title>
+    <title>Full Set vs Premium Beef Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>BEEF PURCHASING MODEL</h1>
-        <h2>Full Set Model Simulation</h2>
-    </header>
+    <h1>Full Set vs Premium Beef Model Comparison</h1>
 
-    <section id="inputSection">
-        <h3>Enter Your Average Monthly Beef Consumption</h3>
-        <label for="guestConsumption">Guest Beef Consumption (kg):</label>
-        <input type="number" id="guestConsumption" name="guestConsumption">
-        <label for="staffConsumption">Staff Beef Consumption (kg):</label>
-        <input type="number" id="staffConsumption" name="staffConsumption">
+    <!-- Input Section -->
+    <div class="input-section">
+        <h2>Enter Beef Consumption</h2>
+        <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
+        <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
+        <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
+        <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
         <button onclick="calculate()">Calculate</button>
-    </section>
+    </div>
 
-    <!-- Table for Result Comparison -->
-    <section id="resultComparison">
-        <h3>Purchasing Model Comparison</h3>
-        <table border="1" cellspacing="0" cellpadding="8">
-            <thead>
-                <tr>
-                    <th>Model</th>
-                    <th>Total Cows Slaughtered</th>
-                    <th>Premium Cuts</th>
-                    <th>Thin Steaks</th>
-                    <th>Roasts</th>
-                    <th>Stew Meat</th>
-                    <th>Ground Meat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Premium Only</td>
-                    <td><span id="premiumCows"></span></td>
-                    <td><span id="thickSteaks"></span></td>
-                    <td><span id="thinSteaks"></span></td>
-                    <td><span id="roasts"></span></td>
-                    <td><span id="stewMeat"></span></td>
-                    <td><span id="groundMeat"></span></td>
-                </tr>
-                <tr>
-                    <td>Full Set Model</td>
-                    <td><span id="fullSetCows"></span></td>
-                    <td><span id="fullSetPremiumCuts"></span></td>
-                    <td><span id="fullSetThinSteaks"></span></td>
-                    <td><span id="fullSetBoneInRoasts"></span></td>
-                    <td><span id="fullSetCubeMeat"></span></td>
-                    <td><span id="fullSetGroundMeat"></span></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <!-- Results Table (Side by Side) -->
+    <div class="results-section">
+        <h2>Results Comparison</h2>
+        <div class="comparison-table">
+            <div class="model">
+                <h3>Premium Only Model</h3>
+                <div id="premiumResult"></div>
+            </div>
+            <div class="model">
+                <h3>Full Set Model</h3>
+                <div id="fullsetResult"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Environmental Impact Section -->
-    <section id="environmentImpact">
-        <div style="text-align:center;">
-            <h4>Environmental Impact Comparison</h4>
-            CO₂ Saved: <span id="co2Saved"></span><br>
-            Water Saved: <span id="waterSaved"></span><br>
-            Land Saved: <span id="landSaved"></span><br>
-            Carbon Footprint Offset: <span id="carbonFootprintOffset"></span><br>
-            <h4>Cows Saved: <span id="cowsSaved"></span></h4>
-        </div>
-    </section>
+    <div class="environmental-impact">
+        <h2>Environmental Impact Comparison</h2>
+        <div id="environmentImpact"></div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
 
     <script src="calculator.js"></script>
 </body>
