@@ -25,16 +25,46 @@
         <h3>Purchasing Model Comparison</h3>
 
         <div id="premiumResult">
-            <!-- Premium Only results will appear here -->
+            <h4>Current Premium Only Model</h4>
+            <h4>Total Cows Slaughtered: <span id="premiumCows"></span></h4>
+            Premium Cuts for Guests (High Quality): <span id="guestConsumptionKg"></span> kg<br>
+            Premium Cuts for Staff (Low Quality): <span id="staffConsumptionKg"></span> kg
+            <br><br>
+            For guests, premium cuts are used in various forms in various outlets:
+            <p>Thick Steaks: <span id="thickSteaks"></span> kg (40%)</p>
+            <p>Thin Steaks: <span id="thinSteaks"></span> kg (25%)</p>
+            <p>Roasts: <span id="roasts"></span> kg (10%)</p>
+            <p>Stew Meat: <span id="stewMeat"></span> kg (15%)</p>
+            <p>Ground Meat: <span id="groundMeat"></span> kg (10%)</p>
         </div>
 
         <div id="fullsetResult">
-            <!-- Full Set results will appear here -->
+            <h4>Total Cows Slaughtered: <span id="fullSetCows"></span></h4>
+            <h4>Full Set Model (For Guests):</h4>
+            Premium Cuts: <span id="fullSetPremiumCuts"></span> kg<br>
+            Thin Steaks: <span id="fullSetThinSteaks"></span> kg<br>
+            Bone-In Roasts: <span id="fullSetBoneInRoasts"></span> kg<br>
+            Cube Meat: <span id="fullSetCubeMeat"></span> kg<br>
+            Ground Meat: <span id="fullSetGroundMeat"></span> kg<br>
+
+            <h4>Full Set Model (For Staff):</h4>
+            Premium Cuts: <span id="fullSetStaffPremiumCuts"></span> kg<br>
+            Thin Steaks: <span id="fullSetStaffThinSteaks"></span> kg<br>
+            Bone-In Roasts: <span id="fullSetStaffBoneInRoasts"></span> kg<br>
+            Cube Meat: <span id="fullSetStaffCubeMeat"></span> kg<br>
+            Ground Meat: <span id="fullSetStaffGroundMeat"></span> kg
         </div>
     </section>
 
     <section id="environmentImpact">
-        <!-- Environmental impact will appear here -->
+        <div style="text-align:center;">
+            <h4>Environmental Impact Comparison</h4>
+            CO₂ Saved: <span id="co2Saved"></span><br>
+            Water Saved: <span id="waterSaved"></span><br>
+            Land Saved: <span id="landSaved"></span><br>
+            Carbon Footprint Offset: <span id="carbonFootprintOffset"></span><br>
+            <h4>Cows Saved: <span id="cowsSaved"></span></h4>
+        </div>
     </section>
 
     <script src="calculator.js"></script>
