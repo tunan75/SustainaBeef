@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Set Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Full Set vs Premium Beef Calculator</h1>
+
+    <!-- Simple Model Input -->
+    <div>
+        <h2>Simple Model</h2>
+        <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
+        <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
+        <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
+        <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
+        <button onclick="calculateSimple()">Calculate</button>
+        <div id="simpleResult"></div>
+    </div>
+
+    <!-- Complex Model Input -->
+    <div>
+        <h2>Complex Model</h2>
+        <label for="rooms">Number of Guest Rooms:</label>
+        <input type="number" id="rooms" placeholder="Enter number of rooms">
+        <label for="occupancy">Occupancy Rate (%):</label>
+        <input type="number" id="occupancy" placeholder="Enter occupancy rate">
+        <label for="staff">Number of Staff:</label>
+        <input type="number" id="staff" placeholder="Enter number of staff">
+        <button onclick="calculateComplex()">Calculate</button>
+        <div id="complexResult"></div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
