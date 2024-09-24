@@ -7,6 +7,7 @@ const groundMeatYield = 0.20; // 20% ground meat
 const co2PerSteer = 13500; // kg CO₂ per steer
 const waterPerSteer = 7500000; // liters of water per steer
 const landPerSteer = 2000; // square meters per steer
+const carbonOffsetPerSteer = 5000; // kg CO₂ offset per steer
 const steerCanteenBeef = 10; // 10 kg for 1 steer equivalent in low-quality beef (staff canteen)
 
 // Percentages for guest and staff use
@@ -92,9 +93,22 @@ function calculate() {
     const fullSetModelCO2 = fullSetSteers * co2PerSteer;
     const co2Difference = premiumModelCO2 - fullSetModelCO2;
 
+    // Carbon Footprint Offset
+    const carbonFootprintOffset = fullSetSteers * carbonOffsetPerSteer;
+
+    // Calculate how many cows are saved
+    const cowsSaved = (premiumGuestSteers + premiumStaffSteers) - fullSetSteers;
+
+    // Update the environmental impact results
     document.getElementById("environmentImpact").innerHTML = `
-        CO₂ Saved: ${co2Difference.toFixed(2)} kg<br>
-        Water Saved: ${((premiumGuestSteers + premiumStaffSteers) * waterPerSteer - fullSetSteers * waterPerSteer).toFixed(2)} liters<br>
-        Land Saved: ${((premiumGuestSteers + premiumStaffSteers) * landPerSteer - fullSetSteers * landPerSteer).toFixed(2)} sq meters
+        <div style="text-align:center;">
+            <h4>Environmental Impact Comparison</h4>
+            CO₂ Saved: ${co2Difference.toFixed(2)} kg<br>
+            Water Saved: ${((premiumGuestSteers + premiumStaffSteers) * waterPerSteer - fullSetSteers * waterPerSteer).toFixed(2)} liters<br>
+            Land Saved: ${((premiumGuestSteers + premiumStaffSteers) * landPerSteer - fullSetSteers * landPerSteer).toFixed(2)} sq meters<br>
+            Carbon Footprint Offset: ${carbonFootprintOffset.toFixed(2)} kg of CO₂<br>
+            <br>
+            <h4>Cows Saved: ${cowsSaved.toFixed(2)}</h4>
+        </div>
     `;
 }
