@@ -8,7 +8,7 @@ const co2PerSteer = 13500; // kg CO₂ per steer
 const waterPerSteer = 7500000; // liters of water per steer
 const landPerSteer = 2000; // square meters per steer
 
-// Percentages for guest and staff use (from Excel)
+// Percentages for guest and staff use
 const guestUse = {
     premiumCuts: 1.0, // 100% for guests
     thinSteaks: 0.2,  // 20% for guests
@@ -67,14 +67,14 @@ function calculate() {
     `;
 
     document.getElementById("fullsetResult").innerHTML = `
-        <h4>For Guests:</h4>
+        <h4>Full Set Model (For Guests):</h4>
         Premium Cuts: ${guestPremiumCuts.toFixed(2)} kg<br>
         Thin Steaks: ${guestThinSteaks.toFixed(2)} kg<br>
         Bone-In Roasts: ${guestBoneInRoasts.toFixed(2)} kg<br>
         Cube Meat: ${guestCubeMeat.toFixed(2)} kg<br>
         Ground Meat: ${guestGroundMeat.toFixed(2)} kg<br>
 
-        <h4>For Staff:</h4>
+        <h4>Full Set Model (For Staff):</h4>
         Premium Cuts: ${staffPremiumCuts.toFixed(2)} kg<br>
         Thin Steaks: ${staffThinSteaks.toFixed(2)} kg<br>
         Bone-In Roasts: ${staffBoneInRoasts.toFixed(2)} kg<br>
