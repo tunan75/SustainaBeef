@@ -9,6 +9,7 @@ const waterPerSteer = 7500000; // liters of water per steer
 const landPerSteer = 2000; // square meters per steer
 const steerCanteenBeef = 10; // 10 kg for 1 steer equivalent in low-quality beef (staff canteen)
 
+// Percentages for guest and staff use
 const guestUse = {
     premiumCuts: 1.0, // 100% for guests
     thinSteaks: 0.2,  // 20% for guests
@@ -63,14 +64,14 @@ function calculate() {
 
     // Update HTML with Results for Premium Only
     document.getElementById("premiumResult").innerHTML = `
-        Total Steers (Guests - High Quality Beef): ${premiumGuestSteers.toFixed(2)}<br>
-        Premium Cuts for Guests (High Quality): ${guestConsumption} kg<br><br>
-        Total Steers (Staff - Low Quality Beef): ${premiumStaffSteers.toFixed(2)}<br>
+        <h4>Total Cows Slaughtered: ${(premiumGuestSteers + premiumStaffSteers).toFixed(2)}</h4>
+        Premium Cuts for Guests (High Quality): ${guestConsumption} kg<br>
         Premium Cuts for Staff (Low Quality): ${staffConsumption} kg
     `;
 
     // Update HTML with Results for Full Set
     document.getElementById("fullsetResult").innerHTML = `
+        <h4>Total Cows Slaughtered: ${fullSetSteers.toFixed(2)}</h4>
         <h4>Full Set Model (For Guests):</h4>
         Premium Cuts: ${guestPremiumCuts.toFixed(2)} kg<br>
         Thin Steaks: ${guestThinSteaks.toFixed(2)} kg<br>
@@ -83,9 +84,7 @@ function calculate() {
         Thin Steaks: ${staffThinSteaks.toFixed(2)} kg<br>
         Bone-In Roasts: ${staffBoneInRoasts.toFixed(2)} kg<br>
         Cube Meat: ${staffCubeMeat.toFixed(2)} kg<br>
-        Ground Meat: ${staffGroundMeat.toFixed(2)} kg<br>
-
-        <br><strong>Total Steers Slaughtered (Full Set Model): ${fullSetSteers.toFixed(2)}</strong><br>
+        Ground Meat: ${staffGroundMeat.toFixed(2)} kg
     `;
 
     // Environmental Impact Calculation
