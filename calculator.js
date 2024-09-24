@@ -78,6 +78,7 @@ function calculate() {
 
     // Update HTML with Results for Premium Only
     document.getElementById("premiumResult").innerHTML = `
+        <h4>Current Premium Only Model</h4>
         <h4>Total Cows Slaughtered: ${(premiumGuestSteers + premiumStaffSteers).toFixed(2)}</h4>
         Premium Cuts for Guests (High Quality): ${guestConsumption} kg<br>
         Premium Cuts for Staff (Low Quality): ${staffConsumption} kg
