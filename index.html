@@ -11,7 +11,7 @@
 
     <!-- Input Section -->
     <div class="input-section">
-        <h2>Enter Beef Consumption</h2>
+        <h2>Enter Your Average Monthly Beef Consumption</h2>
         <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
         <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
         <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
@@ -19,19 +19,17 @@
         <button onclick="calculate()">Calculate</button>
     </div>
 
-    <!-- Results Table (Side by Side) -->
+    <!-- Results Section -->
     <div class="results-section">
         <h2>Results Comparison</h2>
-        <div class="comparison-table">
-            <div class="model">
-                <h3>Premium Only Model</h3>
-                <div id="premiumResult"></div>
-            </div>
-            <div class="model">
-                <h3>Full Set Model</h3>
-                <div id="fullsetResult"></div>
-            </div>
-        </div>
+
+        <!-- Premium Model -->
+        <div id="premiumResult"></div>
+        <div id="premiumTotal"></div>
+
+        <!-- Full Set Model -->
+        <div id="fullsetResult"></div>
+        <div id="fullSetTotal"></div>
     </div>
 
     <!-- Environmental Impact Section -->
