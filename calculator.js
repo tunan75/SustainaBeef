@@ -81,21 +81,6 @@ function calculate() {
         <h4>Total Cows Slaughtered: ${(premiumGuestSteers + premiumStaffSteers).toFixed(2)}</h4>
         Premium Cuts for Guests (High Quality): ${guestConsumption} kg<br>
         Premium Cuts for Staff (Low Quality): ${staffConsumption} kg
-        <br><br>
-        For Guests, beef is used as thick steaks in A la Carte Restaurants (premium Cuts), thin steaks in sandwiches and buffets, roasts (bone-in steaks and roasts), and stew meat and ground meat for other side dishes. Based on menu stats, the Guest Beef consumption should be divided into the below section:
-        <ul>
-            <li>Premium Cuts: ${(guestConsumption * guestUse.premiumCuts).toFixed(2)} kg</li>
-            <li>Thin Steaks: ${(guestConsumption * guestUse.thinSteaks).toFixed(2)} kg</li>
-            <li>Bone-In Roasts: ${(guestConsumption * guestUse.boneInRoasts).toFixed(2)} kg</li>
-            <li>Cube Meat: ${(guestConsumption * guestUse.cubeMeat).toFixed(2)} kg</li>
-            <li>Ground Meat: ${(guestConsumption * guestUse.groundMeat).toFixed(2)} kg</li>
-        </ul>
-        <br>
-        Staff canteen operations mostly use thin steaks and curry-type cube meat:
-        <ul>
-            <li>Thin Steaks: ${(staffConsumption * staffUse.thinSteaks).toFixed(2)} kg</li>
-            <li>Cube Meat: ${(staffConsumption * staffUse.cubeMeat).toFixed(2)} kg</li>
-        </ul>
     `;
 
     // Update HTML with Results for Full Set
@@ -139,19 +124,4 @@ function calculate() {
             <h4>Cows Saved: ${cowsSaved.toFixed(2)}</h4>
         </div>
     `;
-
-            <h4>Cows Saved: ${cowsSaved.toFixed(2)}</h4>
-        </div>
-    `;
 }
-// Calculate total for guest and staff consumption
-const premiumTotal = guestConsumption + staffConsumption;
-const fullSetTotal = guestConsumption + staffConsumption;
-
-// Update HTML for Premium Only Total
-document.getElementById("premiumTotal").innerHTML = `
-    <h4>Total Beef for Premium Model: ${premiumTotal.toFixed(2)} kg</h4>`;
-
-// Update HTML for Full Set Total
-document.getElementById("fullSetTotal").innerHTML = `
-    <h4>Total Beef for Full Set Model: ${fullSetTotal.toFixed(2)} kg</h4>`;
