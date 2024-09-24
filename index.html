@@ -11,7 +11,7 @@
 
     <!-- Input Section -->
     <div class="input-section">
-        <h2>Enter Your Average Monthly Beef Consumption</h2>
+        <h2>Enter Beef Consumption</h2>
         <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
         <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
         <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
@@ -19,53 +19,19 @@
         <button onclick="calculate()">Calculate</button>
     </div>
 
-    <!-- Results Table -->
+    <!-- Results Table (Side by Side) -->
     <div class="results-section">
         <h2>Results Comparison</h2>
-        <table border="1" cellpadding="10">
-            <thead>
-                <tr>
-                    <th>Model</th>
-                    <th>Total Cows Slaughtered</th>
-                    <th>Premium Cuts (kg)</th>
-                    <th>Thin Steaks (kg)</th>
-                    <th>Roasts (kg)</th>
-                    <th>Stew Meat (kg)</th>
-                    <th>Ground Meat (kg)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Premium Model Row -->
-                <tr>
-                    <td>Premium Only</td>
-                    <td><span id="premiumCows"></span></td>
-                    <td><span id="thickSteaks"></span></td>
-                    <td><span id="thinSteaks"></span></td>
-                    <td><span id="roasts"></span></td>
-                    <td><span id="stewMeat"></span></td>
-                    <td><span id="groundMeat"></span></td>
-                </tr>
-                <!-- Full Set Model Row -->
-                <tr>
-                    <td>Full Set</td>
-                    <td><span id="fullSetCows"></span></td>
-                    <td><span id="fullSetPremiumCuts"></span></td>
-                    <td><span id="fullSetThinSteaks"></span></td>
-                    <td><span id="fullSetBoneInRoasts"></span></td>
-                    <td><span id="fullSetCubeMeat"></span></td>
-                    <td><span id="fullSetGroundMeat"></span></td>
-                </tr>
-                <!-- Totals for Guest and Staff -->
-                <tr>
-                    <td>Total (Guest & Staff - Premium)</td>
-                    <td colspan="6"><span id="premiumTotal"></span> kg</td>
-                </tr>
-                <tr>
-                    <td>Total (Guest & Staff - Full Set)</td>
-                    <td colspan="6"><span id="fullSetTotal"></span> kg</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="comparison-table">
+            <div class="model">
+                <h3>Premium Only Model</h3>
+                <div id="premiumResult"></div>
+            </div>
+            <div class="model">
+                <h3>Full Set Model</h3>
+                <div id="fullsetResult"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Environmental Impact Section -->
@@ -73,6 +39,10 @@
         <h2>Environmental Impact Comparison</h2>
         <div id="environmentImpact"></div>
     </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
 
     <script src="calculator.js"></script>
 </body>
