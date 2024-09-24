@@ -3,98 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Set Calculator</title>
+    <title>Full Set vs Premium Beef Comparison</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Full Set vs Premium Beef Calculator</h1>
 
-    <!-- Simple Model Input -->
-    <div>
-        <h2>Simple Model</h2>
-        <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
-        <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
-        <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
-        <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
-        <button onclick="calculateSimple()">Calculate</button>
-        <div id="simpleResult"></div>
-    </div>
-
-    <!-- Complex Model Input -->
-    <div>
-        <h2>Complex Model</h2>
-        <label for="rooms">Number of Guest Rooms:</label>
-        <input type="number" id="rooms" placeholder="Enter number of rooms">
-        <label for="occupancy">Occupancy Rate (%):</label>
-        <input type="number" id="occupancy" placeholder="Enter occupancy rate">
-        <label for="staff">Number of Staff:</label>
-        <input type="number" id="staff" placeholder="Enter number of staff">
-        <button onclick="calculateComplex()">Calculate</button>
-        <div id="complexResult"></div>
-    </div>
-
-    <script src="calculator.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Set vs Premium Beef Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Full Set vs Premium Beef Model Comparison</h1>
-
-    <!-- Legend with Assumptions -->
-    <div class="legend">
-        <h3>Assumptions</h3>
-        <ul>
-            <li>Steer Yield: 220 kg of beef per steer</li>
-            <li>Premium Cut Yield (Premium Only): 20%</li>
-            <li>Full Set Cut Yield: 100% utilization</li>
-            <li>CO₂ per Steer: 13,500 kg</li>
-            <li>Water per Steer: 7,500,000 liters</li>
-            <li>Land per Steer: 2,000 square meters</li>
-        </ul>
-    </div>
-
-    <!-- Input Section for Simple Model -->
+    <!-- Singular Input Section -->
     <div class="input-section">
-        <h2>Enter Beef Consumption</h2>
+        <h2>Enter Monthly Beef Consumption</h2>
         <label for="guestConsumption">Guest Monthly Beef Consumption (kg):</label>
         <input type="number" id="guestConsumption" placeholder="Enter amount in kg">
         <label for="staffConsumption">Staff Monthly Beef Consumption (kg):</label>
         <input type="number" id="staffConsumption" placeholder="Enter amount in kg">
-        <button onclick="calculate()">Calculate</button>
+        <button onclick="calculateComparison()">Calculate</button>
     </div>
 
-    <!-- Results Table (Side by Side) -->
-    <div class="results-section">
+    <!-- Singular Output Comparison -->
+    <div class="comparison-section">
         <h2>Results Comparison</h2>
         <div class="comparison-table">
             <div class="model">
                 <h3>Premium Only Model</h3>
-                <div id="premiumResult">
-                    <!-- Premium Model Results Go Here -->
-                </div>
+                <div id="premiumResult"></div>
             </div>
             <div class="model">
                 <h3>Full Set Model</h3>
-                <div id="fullsetResult">
-                    <!-- Full Set Model Results Go Here -->
-                </div>
+                <div id="fullsetResult"></div>
             </div>
         </div>
     </div>
 
-    <!-- Environmental Impact Section -->
-    <div class="environmental-impact">
-        <h2>Environmental Impact Comparison</h2>
-        <div id="environmentImpact">
-            <!-- Environmental Impact Results Go Here -->
-        </div>
+    <!-- Summary of Environmental Impact -->
+    <div class="summary-section">
+        <h2>Positive Environmental Impact of Full Set</h2>
+        <div id="environmentImpact"></div>
     </div>
 
     <script src="calculator.js"></script>
